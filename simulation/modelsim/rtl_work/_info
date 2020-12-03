@@ -1,0 +1,186 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\aparcacoches\simulation\modelsim
+Ebina7seg
+Z1 w1606918629
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\altera\13.0sp1\aparcacoches\simulation\modelsim
+Z5 8C:/altera/13.0sp1/aparcacoches/BinA7Seg.vhd
+Z6 FC:/altera/13.0sp1/aparcacoches/BinA7Seg.vhd
+l0
+L4
+V72zBPDk3BVXe@S[W8FMFn1
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1606984244.522000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/aparcacoches/BinA7Seg.vhd|
+Z10 !s107 C:/altera/13.0sp1/aparcacoches/BinA7Seg.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 ndT9gDLTBc2lWlTiCUfR;0
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 8 bina7seg 0 22 72zBPDk3BVXe@S[W8FMFn1
+l13
+L11
+VYE@NI:i@mL4OjjNIDSfi51
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 3A6jilSJi0B_X<?;MQOGf0
+!i10b 1
+Econtadorascdes
+Z13 w1606982525
+Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z15 8C:/altera/13.0sp1/aparcacoches/contadorascdes.vhd
+Z16 FC:/altera/13.0sp1/aparcacoches/contadorascdes.vhd
+l0
+L5
+VjI;CECXkhiCX[Lic>1E[a1
+R7
+31
+Z17 !s108 1606984244.680000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/aparcacoches/contadorascdes.vhd|
+Z19 !s107 C:/altera/13.0sp1/aparcacoches/contadorascdes.vhd|
+R11
+R12
+!s100 Fdl84l]=6RL`jk[`[M:lg0
+!i10b 1
+Abehavioral
+R14
+R2
+R3
+DEx4 work 14 contadorascdes 0 22 jI;CECXkhiCX[Lic>1E[a1
+l21
+L18
+VKIAnJ6JMCLX43ToR;ne943
+R7
+31
+R17
+R18
+R19
+R11
+R12
+!s100 ;X^7;D`Z:7Ekde=5ROWN00
+!i10b 1
+Econtadorascdes_vhd_tst
+Z20 w1606984088
+R2
+R3
+R4
+Z21 8C:/altera/13.0sp1/aparcacoches/simulation/modelsim/contadorascdes.vht
+Z22 FC:/altera/13.0sp1/aparcacoches/simulation/modelsim/contadorascdes.vht
+l0
+L29
+VmCT4`WG5A=Bg5C]5cMHLF1
+!s100 Y=Zb]1G3TaLiOdJnCl^RJ1
+R7
+31
+!i10b 1
+Z23 !s108 1606984245.008000
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/aparcacoches/simulation/modelsim/contadorascdes.vht|
+Z25 !s107 C:/altera/13.0sp1/aparcacoches/simulation/modelsim/contadorascdes.vht|
+R11
+R12
+Acontadorascdes_arch
+R2
+R3
+DEx4 work 22 contadorascdes_vhd_tst 0 22 mCT4`WG5A=Bg5C]5cMHLF1
+l54
+L32
+VEg8UgkO[CUI@lL6RLR5:81
+!s100 Mg^DSGZ[V?7KU]WYISEbP1
+R7
+31
+!i10b 1
+R23
+R24
+R25
+R11
+R12
+Edetectorflanco
+Z26 w1606918526
+R14
+R2
+R3
+R4
+Z27 8C:/altera/13.0sp1/aparcacoches/detectorflanco.vhd
+Z28 FC:/altera/13.0sp1/aparcacoches/detectorflanco.vhd
+l0
+L5
+VThi_XGg5BRIT;WK]T5V]X3
+R7
+31
+Z29 !s108 1606984244.352000
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/aparcacoches/detectorflanco.vhd|
+Z31 !s107 C:/altera/13.0sp1/aparcacoches/detectorflanco.vhd|
+R11
+R12
+!s100 OQc42a6_5DB;[IYdkdEUZ3
+!i10b 1
+Abehavioral
+R14
+R2
+R3
+DEx4 work 14 detectorflanco 0 22 Thi_XGg5BRIT;WK]T5V]X3
+l16
+L13
+V3O:NHJ`OEgd8<D31JHmPc3
+R7
+31
+R29
+R30
+R31
+R11
+R12
+!s100 Soj1hCJ3Y_7Dbmd0aL=9I1
+!i10b 1
+Epract10
+Z32 w1606982796
+R14
+R2
+R3
+R4
+Z33 8C:/altera/13.0sp1/aparcacoches/pract10.vhd
+Z34 FC:/altera/13.0sp1/aparcacoches/pract10.vhd
+l0
+L5
+VeJJfHPJhfoCzSXn5VR4NC0
+R7
+31
+Z35 !s108 1606984244.845000
+Z36 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/aparcacoches/pract10.vhd|
+Z37 !s107 C:/altera/13.0sp1/aparcacoches/pract10.vhd|
+R11
+R12
+!s100 VAZ[XiTTne1Bb?[m17GS>1
+!i10b 1
+Abehavioral
+R14
+R2
+R3
+DEx4 work 7 pract10 0 22 eJJfHPJhfoCzSXn5VR4NC0
+l52
+L17
+VRlk=bXHn[d6^EPfKHR<_^0
+R7
+31
+R35
+R36
+R37
+R11
+R12
+!s100 eRe3WdA2=zc[Rn70ZmRe50
+!i10b 1

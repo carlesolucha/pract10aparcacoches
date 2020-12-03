@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity pract10 is
+	port(
+	reset_n : in std_logic;
+	clk : in std_logic;
+	entra_coche : in std_logic;
+	sale_coche : in std_logic;
+	max_coche : out std_logic_vector(7 downto 0);
+	d_a , d_b : out std_logic_vector(7 downto 0);
+	luz_verde : out std_logic;
+	luz_roja : out std_logic);
+end pract10;
+
+architecture behavioral of pract10 is
+
+	component detectorflanco
+		port(
+		)
+	

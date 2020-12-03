@@ -1,0 +1,83 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\aparcacoches\simulation\modelsim
+Epract10
+Z1 w1606930767
+Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z3 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 zUjlM<IUJVWSWg:L2<>ic3
+Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 DPx9 cycloneii 20 cycloneii_components 0 22 h@gSJ;Al32oYg[7^PbnAR0
+Z8 dC:\altera\13.0sp1\aparcacoches\simulation\modelsim
+Z9 8pract10.vho
+Z10 Fpract10.vho
+l0
+L34
+VUDgjLYeEOZ[mle?UhYbES1
+Z11 OV;C;10.1d;51
+31
+Z12 !s108 1606979317.127000
+Z13 !s90 -reportprogress|300|-93|-work|work|pract10.vho|
+Z14 !s107 pract10.vho|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
+!s100 N1KR_aKj@U64[2:Q<c0IC3
+!i10b 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 7 pract10 0 22 UDgjLYeEOZ[mle?UhYbES1
+l153
+L79
+V4Goz3<IJk`4Gdg>nBfLOE3
+R11
+31
+R12
+R13
+R14
+R15
+R16
+!s100 BUFM3BHNO9RMH^bf2[EmW3
+!i10b 1
+Epract10_vhd_tst
+Z17 w1606979287
+R5
+R6
+R8
+Z18 8C:/altera/13.0sp1/aparcacoches/simulation/modelsim/pract10.vht
+Z19 FC:/altera/13.0sp1/aparcacoches/simulation/modelsim/pract10.vht
+l0
+L30
+V>6W3IXmFZK5]HzhVY>8j43
+!s100 TZ0fZRX1bT>gzP;HmNa;M1
+R11
+31
+!i10b 1
+Z20 !s108 1606979317.288000
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0sp1/aparcacoches/simulation/modelsim/pract10.vht|
+Z22 !s107 C:/altera/13.0sp1/aparcacoches/simulation/modelsim/pract10.vht|
+R15
+R16
+Apract10_arch
+R5
+R6
+DEx4 work 15 pract10_vhd_tst 0 22 >6W3IXmFZK5]HzhVY>8j43
+l57
+L32
+VLTS;G_n:2ba@_cG2ST8Rl1
+!s100 :ELZhVb:I?M2<E<cNOLid3
+R11
+31
+!i10b 1
+R20
+R21
+R22
+R15
+R16

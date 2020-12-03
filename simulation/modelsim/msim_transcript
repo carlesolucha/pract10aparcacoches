@@ -1,0 +1,89 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do pract10_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/altera/13.0sp1/aparcacoches/detectorflanco.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DetectorFlanco
+# -- Compiling architecture behavioral of DetectorFlanco
+# vcom -93 -work work {C:/altera/13.0sp1/aparcacoches/BinA7Seg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity BinA7Seg
+# -- Compiling architecture behavioral of BinA7Seg
+# vcom -93 -work work {C:/altera/13.0sp1/aparcacoches/contadorascdes.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity contadorascdes
+# -- Compiling architecture behavioral of contadorascdes
+# vcom -93 -work work {C:/altera/13.0sp1/aparcacoches/pract10.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pract10
+# -- Compiling architecture behavioral of pract10
+# 
+# vcom -93 -work work {C:/altera/13.0sp1/aparcacoches/simulation/modelsim/contadorascdes.vht}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity contadorascdes_vhd_tst
+# -- Compiling architecture contadorascdes_arch of contadorascdes_vhd_tst
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  contadorasc_des_vhd_tst
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps contadorasc_des_vhd_tst 
+# ** Error: (vsim-3170) Could not find 'C:/altera/13.0sp1/aparcacoches/simulation/modelsim/rtl_work.contadorasc_des_vhd_tst'.
+# 
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./pract10_run_msim_rtl_vhdl.do PAUSED at line 15
+vsim rtl_work.contadorascdes_vhd_tst
+# vsim rtl_work.contadorascdes_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.contadorascdes_vhd_tst(contadorascdes_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.contadorascdes(behavioral)
+add wave -position end  sim:/contadorascdes_vhd_tst/clk
+add wave -position end  sim:/contadorascdes_vhd_tst/a_dentrada
+add wave -position end  sim:/contadorascdes_vhd_tst/luz_verde
+add wave -position end  sim:/contadorascdes_vhd_tst/max
+add wave -position end  sim:/contadorascdes_vhd_tst/s
+add wave -position end  sim:/contadorascdes_vhd_tst/luz_roja
+add wave -position end  sim:/contadorascdes_vhd_tst/reset_n
+add wave -position end  sim:/contadorascdes_vhd_tst/a_dsalida
+# Load canceled
+run -all
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /contadorascdes_vhd_tst/i1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /contadorascdes_vhd_tst/i1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /contadorascdes_vhd_tst/i1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /contadorascdes_vhd_tst/i1
+# ** Failure: Error el contador no satura
+#    Time: 10160 ns  Iteration: 0  Process: /contadorascdes_vhd_tst/always File: C:/altera/13.0sp1/aparcacoches/simulation/modelsim/contadorascdes.vht
+# Break in Process always at C:/altera/13.0sp1/aparcacoches/simulation/modelsim/contadorascdes.vht line 90

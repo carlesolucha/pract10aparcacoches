@@ -1,0 +1,1215 @@
+TimeQuest Timing Analyzer report for pract10
+Thu Dec 03 10:00:47 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Hold: 'clk'
+ 13. Slow Model Minimum Pulse Width: 'clk'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'clk'
+ 26. Fast Model Hold: 'clk'
+ 27. Fast Model Minimum Pulse Width: 'clk'
+ 28. Setup Times
+ 29. Hold Times
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Propagation Delay
+ 33. Minimum Propagation Delay
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Progagation Delay
+ 40. Minimum Progagation Delay
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; pract10                                                           ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 257.6 MHz ; 257.6 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -2.882 ; -23.294       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.865 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.631 ; -16.295               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                                                              ;
++--------+---------------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                         ; To Node                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.882 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.920      ;
+; -2.882 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.920      ;
+; -2.882 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.920      ;
+; -2.882 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.920      ;
+; -2.882 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.920      ;
+; -2.882 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.920      ;
+; -2.882 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.920      ;
+; -2.882 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.920      ;
+; -2.788 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.826      ;
+; -2.788 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.826      ;
+; -2.788 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.826      ;
+; -2.788 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.826      ;
+; -2.788 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.826      ;
+; -2.788 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.826      ;
+; -2.788 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.826      ;
+; -2.788 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.826      ;
+; -2.722 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.760      ;
+; -2.722 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.760      ;
+; -2.722 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.760      ;
+; -2.722 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.760      ;
+; -2.722 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.760      ;
+; -2.722 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.760      ;
+; -2.722 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.760      ;
+; -2.722 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.760      ;
+; -2.693 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.731      ;
+; -2.693 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.731      ;
+; -2.693 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.731      ;
+; -2.693 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.731      ;
+; -2.693 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.731      ;
+; -2.693 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.731      ;
+; -2.693 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.731      ;
+; -2.693 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.731      ;
+; -2.679 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.717      ;
+; -2.679 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.717      ;
+; -2.679 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.717      ;
+; -2.679 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.717      ;
+; -2.679 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.717      ;
+; -2.679 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.717      ;
+; -2.679 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.717      ;
+; -2.679 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.717      ;
+; -2.532 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.570      ;
+; -2.532 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.570      ;
+; -2.532 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.570      ;
+; -2.532 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.570      ;
+; -2.532 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.570      ;
+; -2.532 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.570      ;
+; -2.532 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.570      ;
+; -2.532 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.570      ;
+; -2.478 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.516      ;
+; -2.478 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.516      ;
+; -2.478 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.516      ;
+; -2.478 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.516      ;
+; -2.478 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.516      ;
+; -2.478 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.516      ;
+; -2.478 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.516      ;
+; -2.478 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.516      ;
+; -2.192 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.230      ;
+; -2.192 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.230      ;
+; -2.192 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.230      ;
+; -2.192 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.230      ;
+; -2.192 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.230      ;
+; -2.192 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.230      ;
+; -2.192 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.230      ;
+; -2.192 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 3.230      ;
+; -2.150 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 1.000        ; -0.001     ; 3.187      ;
+; -2.150 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 1.000        ; -0.001     ; 3.187      ;
+; -2.150 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 1.000        ; -0.001     ; 3.187      ;
+; -2.150 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 1.000        ; -0.001     ; 3.187      ;
+; -2.150 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 1.000        ; -0.001     ; 3.187      ;
+; -2.150 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 1.000        ; -0.001     ; 3.187      ;
+; -2.150 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 1.000        ; -0.001     ; 3.187      ;
+; -2.150 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 1.000        ; -0.001     ; 3.187      ;
+; -2.049 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 1.000        ; -0.001     ; 3.086      ;
+; -2.049 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 1.000        ; -0.001     ; 3.086      ;
+; -2.049 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 1.000        ; -0.001     ; 3.086      ;
+; -2.049 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 1.000        ; -0.001     ; 3.086      ;
+; -2.049 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 1.000        ; -0.001     ; 3.086      ;
+; -2.049 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 1.000        ; -0.001     ; 3.086      ;
+; -2.049 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 1.000        ; -0.001     ; 3.086      ;
+; -2.049 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 1.000        ; -0.001     ; 3.086      ;
+; -0.121 ; DetectorFlanco:i_detectorflanco2|estado_act.Esp1  ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; clk          ; clk         ; 1.000        ; 0.000      ; 1.159      ;
+; -0.117 ; DetectorFlanco:i_detectorflanco1|estado_act.Esp1  ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; clk          ; clk         ; 1.000        ; 0.000      ; 1.155      ;
++--------+---------------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                                              ;
++-------+---------------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                         ; To Node                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.865 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 0.000        ; -0.001     ; 1.150      ;
+; 0.869 ; DetectorFlanco:i_detectorflanco1|estado_act.Esp1  ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; clk          ; clk         ; 0.000        ; 0.000      ; 1.155      ;
+; 0.873 ; DetectorFlanco:i_detectorflanco2|estado_act.Esp1  ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; clk          ; clk         ; 0.000        ; 0.000      ; 1.159      ;
+; 0.978 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.264      ;
+; 1.030 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.316      ;
+; 1.031 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.317      ;
+; 1.033 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.319      ;
+; 1.200 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.486      ;
+; 1.208 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 0.000        ; -0.001     ; 1.493      ;
+; 1.209 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 0.000        ; -0.001     ; 1.494      ;
+; 1.210 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 0.000        ; -0.001     ; 1.495      ;
+; 1.212 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 0.000        ; -0.001     ; 1.497      ;
+; 1.213 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 0.000        ; -0.001     ; 1.498      ;
+; 1.214 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 0.000        ; -0.001     ; 1.499      ;
+; 1.251 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.537      ;
+; 1.254 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.540      ;
+; 1.258 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.544      ;
+; 1.410 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.696      ;
+; 1.463 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.749      ;
+; 1.464 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.750      ;
+; 1.464 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.750      ;
+; 1.490 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.776      ;
+; 1.543 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.829      ;
+; 1.544 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.830      ;
+; 1.570 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.856      ;
+; 1.623 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.909      ;
+; 1.650 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.936      ;
+; 1.682 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.968      ;
+; 1.687 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.973      ;
+; 1.689 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.975      ;
+; 1.703 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.989      ;
+; 1.730 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.016      ;
+; 1.762 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.048      ;
+; 1.767 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.053      ;
+; 1.769 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.055      ;
+; 1.810 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.096      ;
+; 1.842 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.128      ;
+; 1.847 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.133      ;
+; 1.849 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.135      ;
+; 1.890 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.176      ;
+; 1.922 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.208      ;
+; 1.927 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.213      ;
+; 2.002 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.288      ;
+; 2.007 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.293      ;
+; 2.087 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.373      ;
+; 2.552 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.838      ;
+; 2.552 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.838      ;
+; 2.552 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.838      ;
+; 2.552 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.838      ;
+; 2.552 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.838      ;
+; 2.552 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.838      ;
+; 2.552 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.838      ;
+; 2.801 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 0.000        ; -0.001     ; 3.086      ;
+; 2.895 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.181      ;
+; 2.895 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.181      ;
+; 2.895 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.181      ;
+; 2.902 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 0.000        ; -0.001     ; 3.187      ;
+; 2.902 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 0.000        ; -0.001     ; 3.187      ;
+; 2.902 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 0.000        ; -0.001     ; 3.187      ;
+; 2.902 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 0.000        ; -0.001     ; 3.187      ;
+; 2.902 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 0.000        ; -0.001     ; 3.187      ;
+; 2.902 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 0.000        ; -0.001     ; 3.187      ;
+; 2.902 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 0.000        ; -0.001     ; 3.187      ;
+; 2.902 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 0.000        ; -0.001     ; 3.187      ;
+; 3.055 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.341      ;
+; 3.055 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.341      ;
+; 3.055 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.341      ;
+; 3.055 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.341      ;
+; 3.055 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.341      ;
+; 3.203 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.489      ;
+; 3.203 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.489      ;
+; 3.203 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.489      ;
+; 3.203 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.489      ;
+; 3.203 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.489      ;
+; 3.203 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.489      ;
+; 3.287 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.573      ;
+; 3.296 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.582      ;
+; 3.296 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.582      ;
+; 3.313 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.599      ;
+; 3.313 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.599      ;
+; 3.313 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.599      ;
+; 3.313 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 0.000        ; 0.000      ; 3.599      ;
++-------+---------------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                              ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                            ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clk   ; Rise       ; clk                                               ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; DetectorFlanco:i_detectorflanco1|estado_act.Esp1  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; DetectorFlanco:i_detectorflanco1|estado_act.Esp1  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; DetectorFlanco:i_detectorflanco2|estado_act.Esp1  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; DetectorFlanco:i_detectorflanco2|estado_act.Esp1  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[0]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[0]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[1]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[1]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[2]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[2]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[3]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[3]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[4]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[4]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[5]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[5]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[6]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[6]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[7]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[7]       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_contadorascdes|contador[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_contadorascdes|contador[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_contadorascdes|contador[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_contadorascdes|contador[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_contadorascdes|contador[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_contadorascdes|contador[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_contadorascdes|contador[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_contadorascdes|contador[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_contadorascdes|contador[4]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_contadorascdes|contador[4]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_contadorascdes|contador[5]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_contadorascdes|contador[5]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_contadorascdes|contador[6]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_contadorascdes|contador[6]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_contadorascdes|contador[7]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_contadorascdes|contador[7]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_detectorflanco1|estado_act.Esp1|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_detectorflanco1|estado_act.Esp1|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_detectorflanco1|estado_act.Pulso|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_detectorflanco1|estado_act.Pulso|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_detectorflanco2|estado_act.Esp1|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_detectorflanco2|estado_act.Esp1|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_detectorflanco2|estado_act.Pulso|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_detectorflanco2|estado_act.Pulso|clk            ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; entra_coche   ; clk        ; 5.013 ; 5.013 ; Rise       ; clk             ;
+; max_coche[*]  ; clk        ; 4.148 ; 4.148 ; Rise       ; clk             ;
+;  max_coche[0] ; clk        ; 4.148 ; 4.148 ; Rise       ; clk             ;
+;  max_coche[1] ; clk        ; 3.812 ; 3.812 ; Rise       ; clk             ;
+;  max_coche[2] ; clk        ; 3.907 ; 3.907 ; Rise       ; clk             ;
+;  max_coche[3] ; clk        ; 3.533 ; 3.533 ; Rise       ; clk             ;
+;  max_coche[4] ; clk        ; 3.362 ; 3.362 ; Rise       ; clk             ;
+;  max_coche[5] ; clk        ; 3.380 ; 3.380 ; Rise       ; clk             ;
+;  max_coche[6] ; clk        ; 3.378 ; 3.378 ; Rise       ; clk             ;
+;  max_coche[7] ; clk        ; 2.081 ; 2.081 ; Rise       ; clk             ;
+; sale_coche    ; clk        ; 5.089 ; 5.089 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; entra_coche   ; clk        ; -4.765 ; -4.765 ; Rise       ; clk             ;
+; max_coche[*]  ; clk        ; -1.833 ; -1.833 ; Rise       ; clk             ;
+;  max_coche[0] ; clk        ; -3.900 ; -3.900 ; Rise       ; clk             ;
+;  max_coche[1] ; clk        ; -3.564 ; -3.564 ; Rise       ; clk             ;
+;  max_coche[2] ; clk        ; -3.659 ; -3.659 ; Rise       ; clk             ;
+;  max_coche[3] ; clk        ; -3.285 ; -3.285 ; Rise       ; clk             ;
+;  max_coche[4] ; clk        ; -3.114 ; -3.114 ; Rise       ; clk             ;
+;  max_coche[5] ; clk        ; -3.132 ; -3.132 ; Rise       ; clk             ;
+;  max_coche[6] ; clk        ; -3.130 ; -3.130 ; Rise       ; clk             ;
+;  max_coche[7] ; clk        ; -1.833 ; -1.833 ; Rise       ; clk             ;
+; sale_coche    ; clk        ; -4.838 ; -4.838 ; Rise       ; clk             ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; d_a[*]    ; clk        ; 8.496  ; 8.496  ; Rise       ; clk             ;
+;  d_a[0]   ; clk        ; 8.496  ; 8.496  ; Rise       ; clk             ;
+;  d_a[1]   ; clk        ; 8.308  ; 8.308  ; Rise       ; clk             ;
+;  d_a[2]   ; clk        ; 8.308  ; 8.308  ; Rise       ; clk             ;
+;  d_a[3]   ; clk        ; 8.305  ; 8.305  ; Rise       ; clk             ;
+;  d_a[4]   ; clk        ; 8.279  ; 8.279  ; Rise       ; clk             ;
+;  d_a[5]   ; clk        ; 8.321  ; 8.321  ; Rise       ; clk             ;
+;  d_a[6]   ; clk        ; 8.294  ; 8.294  ; Rise       ; clk             ;
+; d_b[*]    ; clk        ; 8.372  ; 8.372  ; Rise       ; clk             ;
+;  d_b[0]   ; clk        ; 8.240  ; 8.240  ; Rise       ; clk             ;
+;  d_b[1]   ; clk        ; 8.372  ; 8.372  ; Rise       ; clk             ;
+;  d_b[2]   ; clk        ; 7.998  ; 7.998  ; Rise       ; clk             ;
+;  d_b[3]   ; clk        ; 8.001  ; 8.001  ; Rise       ; clk             ;
+;  d_b[4]   ; clk        ; 7.986  ; 7.986  ; Rise       ; clk             ;
+;  d_b[5]   ; clk        ; 7.982  ; 7.982  ; Rise       ; clk             ;
+;  d_b[6]   ; clk        ; 8.328  ; 8.328  ; Rise       ; clk             ;
+; luz_roja  ; clk        ; 11.126 ; 11.126 ; Rise       ; clk             ;
+; luz_verde ; clk        ; 10.760 ; 10.760 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; d_a[*]    ; clk        ; 7.855  ; 7.855  ; Rise       ; clk             ;
+;  d_a[0]   ; clk        ; 7.864  ; 7.864  ; Rise       ; clk             ;
+;  d_a[1]   ; clk        ; 7.873  ; 7.873  ; Rise       ; clk             ;
+;  d_a[2]   ; clk        ; 7.872  ; 7.872  ; Rise       ; clk             ;
+;  d_a[3]   ; clk        ; 7.863  ; 7.863  ; Rise       ; clk             ;
+;  d_a[4]   ; clk        ; 7.872  ; 7.872  ; Rise       ; clk             ;
+;  d_a[5]   ; clk        ; 7.890  ; 7.890  ; Rise       ; clk             ;
+;  d_a[6]   ; clk        ; 7.855  ; 7.855  ; Rise       ; clk             ;
+; d_b[*]    ; clk        ; 7.352  ; 7.352  ; Rise       ; clk             ;
+;  d_b[0]   ; clk        ; 7.607  ; 7.607  ; Rise       ; clk             ;
+;  d_b[1]   ; clk        ; 7.740  ; 7.740  ; Rise       ; clk             ;
+;  d_b[2]   ; clk        ; 7.365  ; 7.365  ; Rise       ; clk             ;
+;  d_b[3]   ; clk        ; 7.367  ; 7.367  ; Rise       ; clk             ;
+;  d_b[4]   ; clk        ; 7.355  ; 7.355  ; Rise       ; clk             ;
+;  d_b[5]   ; clk        ; 7.352  ; 7.352  ; Rise       ; clk             ;
+;  d_b[6]   ; clk        ; 7.731  ; 7.731  ; Rise       ; clk             ;
+; luz_roja  ; clk        ; 10.044 ; 10.044 ; Rise       ; clk             ;
+; luz_verde ; clk        ; 9.678  ; 9.678  ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------+
+; Propagation Delay                                              ;
++--------------+-------------+--------+--------+--------+--------+
+; Input Port   ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++--------------+-------------+--------+--------+--------+--------+
+; max_coche[0] ; luz_roja    ;        ; 11.392 ; 11.392 ;        ;
+; max_coche[0] ; luz_verde   ; 11.026 ;        ;        ; 11.026 ;
+; max_coche[1] ; luz_roja    ;        ; 11.056 ; 11.056 ;        ;
+; max_coche[1] ; luz_verde   ; 10.690 ;        ;        ; 10.690 ;
+; max_coche[2] ; luz_roja    ;        ; 11.151 ; 11.151 ;        ;
+; max_coche[2] ; luz_verde   ; 10.785 ;        ;        ; 10.785 ;
+; max_coche[3] ; luz_roja    ;        ; 10.777 ; 10.777 ;        ;
+; max_coche[3] ; luz_verde   ; 10.411 ;        ;        ; 10.411 ;
+; max_coche[4] ; luz_roja    ;        ; 10.606 ; 10.606 ;        ;
+; max_coche[4] ; luz_verde   ; 10.240 ;        ;        ; 10.240 ;
+; max_coche[5] ; luz_roja    ;        ; 10.624 ; 10.624 ;        ;
+; max_coche[5] ; luz_verde   ; 10.258 ;        ;        ; 10.258 ;
+; max_coche[6] ; luz_roja    ;        ; 10.622 ; 10.622 ;        ;
+; max_coche[6] ; luz_verde   ; 10.256 ;        ;        ; 10.256 ;
+; max_coche[7] ; luz_roja    ;        ; 9.325  ; 9.325  ;        ;
+; max_coche[7] ; luz_verde   ; 8.959  ;        ;        ; 8.959  ;
++--------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------------+
+; Minimum Propagation Delay                                      ;
++--------------+-------------+--------+--------+--------+--------+
+; Input Port   ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++--------------+-------------+--------+--------+--------+--------+
+; max_coche[0] ; luz_roja    ;        ; 11.392 ; 11.392 ;        ;
+; max_coche[0] ; luz_verde   ; 11.026 ;        ;        ; 11.026 ;
+; max_coche[1] ; luz_roja    ;        ; 11.056 ; 11.056 ;        ;
+; max_coche[1] ; luz_verde   ; 10.690 ;        ;        ; 10.690 ;
+; max_coche[2] ; luz_roja    ;        ; 11.151 ; 11.151 ;        ;
+; max_coche[2] ; luz_verde   ; 10.785 ;        ;        ; 10.785 ;
+; max_coche[3] ; luz_roja    ;        ; 10.777 ; 10.777 ;        ;
+; max_coche[3] ; luz_verde   ; 10.411 ;        ;        ; 10.411 ;
+; max_coche[4] ; luz_roja    ;        ; 10.606 ; 10.606 ;        ;
+; max_coche[4] ; luz_verde   ; 10.240 ;        ;        ; 10.240 ;
+; max_coche[5] ; luz_roja    ;        ; 10.624 ; 10.624 ;        ;
+; max_coche[5] ; luz_verde   ; 10.258 ;        ;        ; 10.258 ;
+; max_coche[6] ; luz_roja    ;        ; 10.622 ; 10.622 ;        ;
+; max_coche[6] ; luz_verde   ; 10.256 ;        ;        ; 10.256 ;
+; max_coche[7] ; luz_roja    ;        ; 9.325  ; 9.325  ;        ;
+; max_coche[7] ; luz_verde   ; 8.959  ;        ;        ; 8.959  ;
++--------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.571 ; -4.568        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.351 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -13.380               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                                                              ;
++--------+---------------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                         ; To Node                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.571 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.603      ;
+; -0.571 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.603      ;
+; -0.571 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.603      ;
+; -0.571 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.603      ;
+; -0.571 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.603      ;
+; -0.571 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.603      ;
+; -0.571 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.603      ;
+; -0.571 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.603      ;
+; -0.527 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.559      ;
+; -0.527 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.559      ;
+; -0.527 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.559      ;
+; -0.527 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.559      ;
+; -0.527 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.559      ;
+; -0.527 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.559      ;
+; -0.527 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.559      ;
+; -0.527 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.559      ;
+; -0.497 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.529      ;
+; -0.497 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.529      ;
+; -0.497 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.529      ;
+; -0.497 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.529      ;
+; -0.497 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.529      ;
+; -0.497 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.529      ;
+; -0.497 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.529      ;
+; -0.497 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.529      ;
+; -0.485 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.517      ;
+; -0.485 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.517      ;
+; -0.485 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.517      ;
+; -0.485 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.517      ;
+; -0.485 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.517      ;
+; -0.485 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.517      ;
+; -0.485 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.517      ;
+; -0.485 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.517      ;
+; -0.474 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.506      ;
+; -0.474 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.506      ;
+; -0.474 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.506      ;
+; -0.474 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.506      ;
+; -0.474 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.506      ;
+; -0.474 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.506      ;
+; -0.474 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.506      ;
+; -0.474 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.506      ;
+; -0.427 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.459      ;
+; -0.427 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.459      ;
+; -0.427 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.459      ;
+; -0.427 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.459      ;
+; -0.427 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.459      ;
+; -0.427 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.459      ;
+; -0.427 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.459      ;
+; -0.427 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.459      ;
+; -0.413 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.445      ;
+; -0.413 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.445      ;
+; -0.413 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.445      ;
+; -0.413 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.445      ;
+; -0.413 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.445      ;
+; -0.413 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.445      ;
+; -0.413 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.445      ;
+; -0.413 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.445      ;
+; -0.361 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.393      ;
+; -0.361 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.393      ;
+; -0.361 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.393      ;
+; -0.361 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.393      ;
+; -0.361 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.393      ;
+; -0.361 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.393      ;
+; -0.361 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.393      ;
+; -0.361 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 1.000        ; 0.000      ; 1.393      ;
+; -0.315 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 1.000        ; -0.002     ; 1.345      ;
+; -0.315 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 1.000        ; -0.002     ; 1.345      ;
+; -0.315 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 1.000        ; -0.002     ; 1.345      ;
+; -0.315 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 1.000        ; -0.002     ; 1.345      ;
+; -0.315 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 1.000        ; -0.002     ; 1.345      ;
+; -0.315 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 1.000        ; -0.002     ; 1.345      ;
+; -0.315 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 1.000        ; -0.002     ; 1.345      ;
+; -0.315 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 1.000        ; -0.002     ; 1.345      ;
+; -0.267 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 1.000        ; -0.002     ; 1.297      ;
+; -0.267 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 1.000        ; -0.002     ; 1.297      ;
+; -0.267 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 1.000        ; -0.002     ; 1.297      ;
+; -0.267 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 1.000        ; -0.002     ; 1.297      ;
+; -0.267 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 1.000        ; -0.002     ; 1.297      ;
+; -0.267 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 1.000        ; -0.002     ; 1.297      ;
+; -0.267 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 1.000        ; -0.002     ; 1.297      ;
+; -0.267 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 1.000        ; -0.002     ; 1.297      ;
+; 0.522  ; DetectorFlanco:i_detectorflanco2|estado_act.Esp1  ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; clk          ; clk         ; 1.000        ; 0.000      ; 0.510      ;
+; 0.523  ; DetectorFlanco:i_detectorflanco1|estado_act.Esp1  ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; clk          ; clk         ; 1.000        ; 0.000      ; 0.509      ;
++--------+---------------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                                              ;
++-------+---------------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                         ; To Node                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.351 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 0.000        ; -0.002     ; 0.501      ;
+; 0.357 ; DetectorFlanco:i_detectorflanco1|estado_act.Esp1  ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; clk          ; clk         ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358 ; DetectorFlanco:i_detectorflanco2|estado_act.Esp1  ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.361 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.379 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.531      ;
+; 0.380 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.532      ;
+; 0.380 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.532      ;
+; 0.451 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.603      ;
+; 0.454 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.606      ;
+; 0.458 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.610      ;
+; 0.458 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.610      ;
+; 0.468 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 0.000        ; -0.002     ; 0.618      ;
+; 0.470 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 0.000        ; -0.002     ; 0.620      ;
+; 0.470 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 0.000        ; -0.002     ; 0.620      ;
+; 0.470 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 0.000        ; -0.002     ; 0.620      ;
+; 0.470 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 0.000        ; -0.002     ; 0.620      ;
+; 0.471 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 0.000        ; -0.002     ; 0.621      ;
+; 0.499 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.519 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.671      ;
+; 0.520 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.672      ;
+; 0.520 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.672      ;
+; 0.534 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.686      ;
+; 0.554 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.706      ;
+; 0.555 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.707      ;
+; 0.569 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.721      ;
+; 0.589 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.741      ;
+; 0.594 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.746      ;
+; 0.598 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.750      ;
+; 0.598 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.750      ;
+; 0.604 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.756      ;
+; 0.624 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.776      ;
+; 0.629 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.781      ;
+; 0.633 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.785      ;
+; 0.633 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.785      ;
+; 0.639 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.791      ;
+; 0.664 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.816      ;
+; 0.668 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.820      ;
+; 0.668 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.820      ;
+; 0.674 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.826      ;
+; 0.699 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.851      ;
+; 0.703 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.855      ;
+; 0.709 ; contadorascdes:i_contadorascdes|contador[0]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.861      ;
+; 0.734 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.886      ;
+; 0.738 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.890      ;
+; 0.773 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.925      ;
+; 1.058 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.210      ;
+; 1.058 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.210      ;
+; 1.058 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.210      ;
+; 1.058 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.210      ;
+; 1.058 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.210      ;
+; 1.058 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.210      ;
+; 1.058 ; contadorascdes:i_contadorascdes|contador[7]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.210      ;
+; 1.147 ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 0.000        ; -0.002     ; 1.297      ;
+; 1.188 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.340      ;
+; 1.188 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.340      ;
+; 1.188 ; contadorascdes:i_contadorascdes|contador[3]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.340      ;
+; 1.195 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 0.000        ; -0.002     ; 1.345      ;
+; 1.195 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 0.000        ; -0.002     ; 1.345      ;
+; 1.195 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 0.000        ; -0.002     ; 1.345      ;
+; 1.195 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 0.000        ; -0.002     ; 1.345      ;
+; 1.195 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 0.000        ; -0.002     ; 1.345      ;
+; 1.195 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[6]       ; clk          ; clk         ; 0.000        ; -0.002     ; 1.345      ;
+; 1.195 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[7]       ; clk          ; clk         ; 0.000        ; -0.002     ; 1.345      ;
+; 1.195 ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 0.000        ; -0.002     ; 1.345      ;
+; 1.233 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.385      ;
+; 1.233 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.385      ;
+; 1.233 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.385      ;
+; 1.233 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.385      ;
+; 1.233 ; contadorascdes:i_contadorascdes|contador[5]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.385      ;
+; 1.258 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.410      ;
+; 1.258 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.410      ;
+; 1.258 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.410      ;
+; 1.258 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.410      ;
+; 1.258 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.410      ;
+; 1.258 ; contadorascdes:i_contadorascdes|contador[6]       ; contadorascdes:i_contadorascdes|contador[4]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.410      ;
+; 1.306 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.458      ;
+; 1.306 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.458      ;
+; 1.306 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.458      ;
+; 1.306 ; contadorascdes:i_contadorascdes|contador[4]       ; contadorascdes:i_contadorascdes|contador[3]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.458      ;
+; 1.320 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.472      ;
+; 1.320 ; contadorascdes:i_contadorascdes|contador[2]       ; contadorascdes:i_contadorascdes|contador[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.472      ;
+; 1.345 ; contadorascdes:i_contadorascdes|contador[1]       ; contadorascdes:i_contadorascdes|contador[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.497      ;
++-------+---------------------------------------------------+---------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                              ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                            ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DetectorFlanco:i_detectorflanco1|estado_act.Esp1  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DetectorFlanco:i_detectorflanco1|estado_act.Esp1  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DetectorFlanco:i_detectorflanco1|estado_act.Pulso ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DetectorFlanco:i_detectorflanco2|estado_act.Esp1  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DetectorFlanco:i_detectorflanco2|estado_act.Esp1  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DetectorFlanco:i_detectorflanco2|estado_act.Pulso ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[0]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[0]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[1]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[1]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[2]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[2]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[3]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[3]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[4]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[4]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[5]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[5]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[6]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[6]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[7]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; contadorascdes:i_contadorascdes|contador[7]       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_contadorascdes|contador[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_contadorascdes|contador[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_contadorascdes|contador[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_contadorascdes|contador[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_contadorascdes|contador[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_contadorascdes|contador[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_contadorascdes|contador[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_contadorascdes|contador[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_contadorascdes|contador[4]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_contadorascdes|contador[4]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_contadorascdes|contador[5]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_contadorascdes|contador[5]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_contadorascdes|contador[6]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_contadorascdes|contador[6]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_contadorascdes|contador[7]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_contadorascdes|contador[7]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_detectorflanco1|estado_act.Esp1|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_detectorflanco1|estado_act.Esp1|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_detectorflanco1|estado_act.Pulso|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_detectorflanco1|estado_act.Pulso|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_detectorflanco2|estado_act.Esp1|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_detectorflanco2|estado_act.Esp1|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; i_detectorflanco2|estado_act.Pulso|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; i_detectorflanco2|estado_act.Pulso|clk            ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; entra_coche   ; clk        ; 2.344 ; 2.344 ; Rise       ; clk             ;
+; max_coche[*]  ; clk        ; 1.213 ; 1.213 ; Rise       ; clk             ;
+;  max_coche[0] ; clk        ; 1.213 ; 1.213 ; Rise       ; clk             ;
+;  max_coche[1] ; clk        ; 1.055 ; 1.055 ; Rise       ; clk             ;
+;  max_coche[2] ; clk        ; 1.118 ; 1.118 ; Rise       ; clk             ;
+;  max_coche[3] ; clk        ; 0.984 ; 0.984 ; Rise       ; clk             ;
+;  max_coche[4] ; clk        ; 0.888 ; 0.888 ; Rise       ; clk             ;
+;  max_coche[5] ; clk        ; 0.938 ; 0.938 ; Rise       ; clk             ;
+;  max_coche[6] ; clk        ; 0.956 ; 0.956 ; Rise       ; clk             ;
+;  max_coche[7] ; clk        ; 0.349 ; 0.349 ; Rise       ; clk             ;
+; sale_coche    ; clk        ; 2.386 ; 2.386 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; entra_coche   ; clk        ; -2.223 ; -2.223 ; Rise       ; clk             ;
+; max_coche[*]  ; clk        ; -0.229 ; -0.229 ; Rise       ; clk             ;
+;  max_coche[0] ; clk        ; -1.093 ; -1.093 ; Rise       ; clk             ;
+;  max_coche[1] ; clk        ; -0.935 ; -0.935 ; Rise       ; clk             ;
+;  max_coche[2] ; clk        ; -0.998 ; -0.998 ; Rise       ; clk             ;
+;  max_coche[3] ; clk        ; -0.864 ; -0.864 ; Rise       ; clk             ;
+;  max_coche[4] ; clk        ; -0.768 ; -0.768 ; Rise       ; clk             ;
+;  max_coche[5] ; clk        ; -0.818 ; -0.818 ; Rise       ; clk             ;
+;  max_coche[6] ; clk        ; -0.836 ; -0.836 ; Rise       ; clk             ;
+;  max_coche[7] ; clk        ; -0.229 ; -0.229 ; Rise       ; clk             ;
+; sale_coche    ; clk        ; -2.265 ; -2.265 ; Rise       ; clk             ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; d_a[*]    ; clk        ; 4.294 ; 4.294 ; Rise       ; clk             ;
+;  d_a[0]   ; clk        ; 4.294 ; 4.294 ; Rise       ; clk             ;
+;  d_a[1]   ; clk        ; 4.227 ; 4.227 ; Rise       ; clk             ;
+;  d_a[2]   ; clk        ; 4.232 ; 4.232 ; Rise       ; clk             ;
+;  d_a[3]   ; clk        ; 4.222 ; 4.222 ; Rise       ; clk             ;
+;  d_a[4]   ; clk        ; 4.227 ; 4.227 ; Rise       ; clk             ;
+;  d_a[5]   ; clk        ; 4.239 ; 4.239 ; Rise       ; clk             ;
+;  d_a[6]   ; clk        ; 4.215 ; 4.215 ; Rise       ; clk             ;
+; d_b[*]    ; clk        ; 4.288 ; 4.288 ; Rise       ; clk             ;
+;  d_b[0]   ; clk        ; 4.218 ; 4.218 ; Rise       ; clk             ;
+;  d_b[1]   ; clk        ; 4.288 ; 4.288 ; Rise       ; clk             ;
+;  d_b[2]   ; clk        ; 4.124 ; 4.124 ; Rise       ; clk             ;
+;  d_b[3]   ; clk        ; 4.125 ; 4.125 ; Rise       ; clk             ;
+;  d_b[4]   ; clk        ; 4.118 ; 4.118 ; Rise       ; clk             ;
+;  d_b[5]   ; clk        ; 4.110 ; 4.110 ; Rise       ; clk             ;
+;  d_b[6]   ; clk        ; 4.279 ; 4.279 ; Rise       ; clk             ;
+; luz_roja  ; clk        ; 5.462 ; 5.462 ; Rise       ; clk             ;
+; luz_verde ; clk        ; 5.318 ; 5.318 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; d_a[*]    ; clk        ; 4.066 ; 4.066 ; Rise       ; clk             ;
+;  d_a[0]   ; clk        ; 4.066 ; 4.066 ; Rise       ; clk             ;
+;  d_a[1]   ; clk        ; 4.106 ; 4.106 ; Rise       ; clk             ;
+;  d_a[2]   ; clk        ; 4.104 ; 4.104 ; Rise       ; clk             ;
+;  d_a[3]   ; clk        ; 4.100 ; 4.100 ; Rise       ; clk             ;
+;  d_a[4]   ; clk        ; 4.104 ; 4.104 ; Rise       ; clk             ;
+;  d_a[5]   ; clk        ; 4.119 ; 4.119 ; Rise       ; clk             ;
+;  d_a[6]   ; clk        ; 4.084 ; 4.084 ; Rise       ; clk             ;
+; d_b[*]    ; clk        ; 3.885 ; 3.885 ; Rise       ; clk             ;
+;  d_b[0]   ; clk        ; 3.995 ; 3.995 ; Rise       ; clk             ;
+;  d_b[1]   ; clk        ; 4.059 ; 4.059 ; Rise       ; clk             ;
+;  d_b[2]   ; clk        ; 3.900 ; 3.900 ; Rise       ; clk             ;
+;  d_b[3]   ; clk        ; 3.900 ; 3.900 ; Rise       ; clk             ;
+;  d_b[4]   ; clk        ; 3.889 ; 3.889 ; Rise       ; clk             ;
+;  d_b[5]   ; clk        ; 3.885 ; 3.885 ; Rise       ; clk             ;
+;  d_b[6]   ; clk        ; 4.053 ; 4.053 ; Rise       ; clk             ;
+; luz_roja  ; clk        ; 5.069 ; 5.069 ; Rise       ; clk             ;
+; luz_verde ; clk        ; 4.925 ; 4.925 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------+
+; Propagation Delay                                          ;
++--------------+-------------+-------+-------+-------+-------+
+; Input Port   ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++--------------+-------------+-------+-------+-------+-------+
+; max_coche[0] ; luz_roja    ;       ; 5.104 ; 5.104 ;       ;
+; max_coche[0] ; luz_verde   ; 4.960 ;       ;       ; 4.960 ;
+; max_coche[1] ; luz_roja    ;       ; 4.946 ; 4.946 ;       ;
+; max_coche[1] ; luz_verde   ; 4.802 ;       ;       ; 4.802 ;
+; max_coche[2] ; luz_roja    ;       ; 5.009 ; 5.009 ;       ;
+; max_coche[2] ; luz_verde   ; 4.865 ;       ;       ; 4.865 ;
+; max_coche[3] ; luz_roja    ;       ; 4.875 ; 4.875 ;       ;
+; max_coche[3] ; luz_verde   ; 4.731 ;       ;       ; 4.731 ;
+; max_coche[4] ; luz_roja    ;       ; 4.779 ; 4.779 ;       ;
+; max_coche[4] ; luz_verde   ; 4.635 ;       ;       ; 4.635 ;
+; max_coche[5] ; luz_roja    ;       ; 4.829 ; 4.829 ;       ;
+; max_coche[5] ; luz_verde   ; 4.685 ;       ;       ; 4.685 ;
+; max_coche[6] ; luz_roja    ;       ; 4.847 ; 4.847 ;       ;
+; max_coche[6] ; luz_verde   ; 4.703 ;       ;       ; 4.703 ;
+; max_coche[7] ; luz_roja    ;       ; 4.240 ; 4.240 ;       ;
+; max_coche[7] ; luz_verde   ; 4.096 ;       ;       ; 4.096 ;
++--------------+-------------+-------+-------+-------+-------+
+
+
++------------------------------------------------------------+
+; Minimum Propagation Delay                                  ;
++--------------+-------------+-------+-------+-------+-------+
+; Input Port   ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++--------------+-------------+-------+-------+-------+-------+
+; max_coche[0] ; luz_roja    ;       ; 5.104 ; 5.104 ;       ;
+; max_coche[0] ; luz_verde   ; 4.960 ;       ;       ; 4.960 ;
+; max_coche[1] ; luz_roja    ;       ; 4.946 ; 4.946 ;       ;
+; max_coche[1] ; luz_verde   ; 4.802 ;       ;       ; 4.802 ;
+; max_coche[2] ; luz_roja    ;       ; 5.009 ; 5.009 ;       ;
+; max_coche[2] ; luz_verde   ; 4.865 ;       ;       ; 4.865 ;
+; max_coche[3] ; luz_roja    ;       ; 4.875 ; 4.875 ;       ;
+; max_coche[3] ; luz_verde   ; 4.731 ;       ;       ; 4.731 ;
+; max_coche[4] ; luz_roja    ;       ; 4.779 ; 4.779 ;       ;
+; max_coche[4] ; luz_verde   ; 4.635 ;       ;       ; 4.635 ;
+; max_coche[5] ; luz_roja    ;       ; 4.829 ; 4.829 ;       ;
+; max_coche[5] ; luz_verde   ; 4.685 ;       ;       ; 4.685 ;
+; max_coche[6] ; luz_roja    ;       ; 4.847 ; 4.847 ;       ;
+; max_coche[6] ; luz_verde   ; 4.703 ;       ;       ; 4.703 ;
+; max_coche[7] ; luz_roja    ;       ; 4.240 ; 4.240 ;       ;
+; max_coche[7] ; luz_verde   ; 4.096 ;       ;       ; 4.096 ;
++--------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.882  ; 0.351 ; N/A      ; N/A     ; -1.631              ;
+;  clk             ; -2.882  ; 0.351 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -23.294 ; 0.0   ; 0.0      ; 0.0     ; -16.295             ;
+;  clk             ; -23.294 ; 0.000 ; N/A      ; N/A     ; -16.295             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; entra_coche   ; clk        ; 5.013 ; 5.013 ; Rise       ; clk             ;
+; max_coche[*]  ; clk        ; 4.148 ; 4.148 ; Rise       ; clk             ;
+;  max_coche[0] ; clk        ; 4.148 ; 4.148 ; Rise       ; clk             ;
+;  max_coche[1] ; clk        ; 3.812 ; 3.812 ; Rise       ; clk             ;
+;  max_coche[2] ; clk        ; 3.907 ; 3.907 ; Rise       ; clk             ;
+;  max_coche[3] ; clk        ; 3.533 ; 3.533 ; Rise       ; clk             ;
+;  max_coche[4] ; clk        ; 3.362 ; 3.362 ; Rise       ; clk             ;
+;  max_coche[5] ; clk        ; 3.380 ; 3.380 ; Rise       ; clk             ;
+;  max_coche[6] ; clk        ; 3.378 ; 3.378 ; Rise       ; clk             ;
+;  max_coche[7] ; clk        ; 2.081 ; 2.081 ; Rise       ; clk             ;
+; sale_coche    ; clk        ; 5.089 ; 5.089 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; entra_coche   ; clk        ; -2.223 ; -2.223 ; Rise       ; clk             ;
+; max_coche[*]  ; clk        ; -0.229 ; -0.229 ; Rise       ; clk             ;
+;  max_coche[0] ; clk        ; -1.093 ; -1.093 ; Rise       ; clk             ;
+;  max_coche[1] ; clk        ; -0.935 ; -0.935 ; Rise       ; clk             ;
+;  max_coche[2] ; clk        ; -0.998 ; -0.998 ; Rise       ; clk             ;
+;  max_coche[3] ; clk        ; -0.864 ; -0.864 ; Rise       ; clk             ;
+;  max_coche[4] ; clk        ; -0.768 ; -0.768 ; Rise       ; clk             ;
+;  max_coche[5] ; clk        ; -0.818 ; -0.818 ; Rise       ; clk             ;
+;  max_coche[6] ; clk        ; -0.836 ; -0.836 ; Rise       ; clk             ;
+;  max_coche[7] ; clk        ; -0.229 ; -0.229 ; Rise       ; clk             ;
+; sale_coche    ; clk        ; -2.265 ; -2.265 ; Rise       ; clk             ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; d_a[*]    ; clk        ; 8.496  ; 8.496  ; Rise       ; clk             ;
+;  d_a[0]   ; clk        ; 8.496  ; 8.496  ; Rise       ; clk             ;
+;  d_a[1]   ; clk        ; 8.308  ; 8.308  ; Rise       ; clk             ;
+;  d_a[2]   ; clk        ; 8.308  ; 8.308  ; Rise       ; clk             ;
+;  d_a[3]   ; clk        ; 8.305  ; 8.305  ; Rise       ; clk             ;
+;  d_a[4]   ; clk        ; 8.279  ; 8.279  ; Rise       ; clk             ;
+;  d_a[5]   ; clk        ; 8.321  ; 8.321  ; Rise       ; clk             ;
+;  d_a[6]   ; clk        ; 8.294  ; 8.294  ; Rise       ; clk             ;
+; d_b[*]    ; clk        ; 8.372  ; 8.372  ; Rise       ; clk             ;
+;  d_b[0]   ; clk        ; 8.240  ; 8.240  ; Rise       ; clk             ;
+;  d_b[1]   ; clk        ; 8.372  ; 8.372  ; Rise       ; clk             ;
+;  d_b[2]   ; clk        ; 7.998  ; 7.998  ; Rise       ; clk             ;
+;  d_b[3]   ; clk        ; 8.001  ; 8.001  ; Rise       ; clk             ;
+;  d_b[4]   ; clk        ; 7.986  ; 7.986  ; Rise       ; clk             ;
+;  d_b[5]   ; clk        ; 7.982  ; 7.982  ; Rise       ; clk             ;
+;  d_b[6]   ; clk        ; 8.328  ; 8.328  ; Rise       ; clk             ;
+; luz_roja  ; clk        ; 11.126 ; 11.126 ; Rise       ; clk             ;
+; luz_verde ; clk        ; 10.760 ; 10.760 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; d_a[*]    ; clk        ; 4.066 ; 4.066 ; Rise       ; clk             ;
+;  d_a[0]   ; clk        ; 4.066 ; 4.066 ; Rise       ; clk             ;
+;  d_a[1]   ; clk        ; 4.106 ; 4.106 ; Rise       ; clk             ;
+;  d_a[2]   ; clk        ; 4.104 ; 4.104 ; Rise       ; clk             ;
+;  d_a[3]   ; clk        ; 4.100 ; 4.100 ; Rise       ; clk             ;
+;  d_a[4]   ; clk        ; 4.104 ; 4.104 ; Rise       ; clk             ;
+;  d_a[5]   ; clk        ; 4.119 ; 4.119 ; Rise       ; clk             ;
+;  d_a[6]   ; clk        ; 4.084 ; 4.084 ; Rise       ; clk             ;
+; d_b[*]    ; clk        ; 3.885 ; 3.885 ; Rise       ; clk             ;
+;  d_b[0]   ; clk        ; 3.995 ; 3.995 ; Rise       ; clk             ;
+;  d_b[1]   ; clk        ; 4.059 ; 4.059 ; Rise       ; clk             ;
+;  d_b[2]   ; clk        ; 3.900 ; 3.900 ; Rise       ; clk             ;
+;  d_b[3]   ; clk        ; 3.900 ; 3.900 ; Rise       ; clk             ;
+;  d_b[4]   ; clk        ; 3.889 ; 3.889 ; Rise       ; clk             ;
+;  d_b[5]   ; clk        ; 3.885 ; 3.885 ; Rise       ; clk             ;
+;  d_b[6]   ; clk        ; 4.053 ; 4.053 ; Rise       ; clk             ;
+; luz_roja  ; clk        ; 5.069 ; 5.069 ; Rise       ; clk             ;
+; luz_verde ; clk        ; 4.925 ; 4.925 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------+
+; Progagation Delay                                              ;
++--------------+-------------+--------+--------+--------+--------+
+; Input Port   ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++--------------+-------------+--------+--------+--------+--------+
+; max_coche[0] ; luz_roja    ;        ; 11.392 ; 11.392 ;        ;
+; max_coche[0] ; luz_verde   ; 11.026 ;        ;        ; 11.026 ;
+; max_coche[1] ; luz_roja    ;        ; 11.056 ; 11.056 ;        ;
+; max_coche[1] ; luz_verde   ; 10.690 ;        ;        ; 10.690 ;
+; max_coche[2] ; luz_roja    ;        ; 11.151 ; 11.151 ;        ;
+; max_coche[2] ; luz_verde   ; 10.785 ;        ;        ; 10.785 ;
+; max_coche[3] ; luz_roja    ;        ; 10.777 ; 10.777 ;        ;
+; max_coche[3] ; luz_verde   ; 10.411 ;        ;        ; 10.411 ;
+; max_coche[4] ; luz_roja    ;        ; 10.606 ; 10.606 ;        ;
+; max_coche[4] ; luz_verde   ; 10.240 ;        ;        ; 10.240 ;
+; max_coche[5] ; luz_roja    ;        ; 10.624 ; 10.624 ;        ;
+; max_coche[5] ; luz_verde   ; 10.258 ;        ;        ; 10.258 ;
+; max_coche[6] ; luz_roja    ;        ; 10.622 ; 10.622 ;        ;
+; max_coche[6] ; luz_verde   ; 10.256 ;        ;        ; 10.256 ;
+; max_coche[7] ; luz_roja    ;        ; 9.325  ; 9.325  ;        ;
+; max_coche[7] ; luz_verde   ; 8.959  ;        ;        ; 8.959  ;
++--------------+-------------+--------+--------+--------+--------+
+
+
++------------------------------------------------------------+
+; Minimum Progagation Delay                                  ;
++--------------+-------------+-------+-------+-------+-------+
+; Input Port   ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++--------------+-------------+-------+-------+-------+-------+
+; max_coche[0] ; luz_roja    ;       ; 5.104 ; 5.104 ;       ;
+; max_coche[0] ; luz_verde   ; 4.960 ;       ;       ; 4.960 ;
+; max_coche[1] ; luz_roja    ;       ; 4.946 ; 4.946 ;       ;
+; max_coche[1] ; luz_verde   ; 4.802 ;       ;       ; 4.802 ;
+; max_coche[2] ; luz_roja    ;       ; 5.009 ; 5.009 ;       ;
+; max_coche[2] ; luz_verde   ; 4.865 ;       ;       ; 4.865 ;
+; max_coche[3] ; luz_roja    ;       ; 4.875 ; 4.875 ;       ;
+; max_coche[3] ; luz_verde   ; 4.731 ;       ;       ; 4.731 ;
+; max_coche[4] ; luz_roja    ;       ; 4.779 ; 4.779 ;       ;
+; max_coche[4] ; luz_verde   ; 4.635 ;       ;       ; 4.635 ;
+; max_coche[5] ; luz_roja    ;       ; 4.829 ; 4.829 ;       ;
+; max_coche[5] ; luz_verde   ; 4.685 ;       ;       ; 4.685 ;
+; max_coche[6] ; luz_roja    ;       ; 4.847 ; 4.847 ;       ;
+; max_coche[6] ; luz_verde   ; 4.703 ;       ;       ; 4.703 ;
+; max_coche[7] ; luz_roja    ;       ; 4.240 ; 4.240 ;       ;
+; max_coche[7] ; luz_verde   ; 4.096 ;       ;       ; 4.096 ;
++--------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 210      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 210      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 11    ; 11   ;
+; Unconstrained Input Port Paths  ; 96    ; 96   ;
+; Unconstrained Output Ports      ; 16    ; 16   ;
+; Unconstrained Output Port Paths ; 88    ; 88   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Dec 03 10:00:36 2020
+Info: Command: quartus_sta pract10 -c pract10
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'pract10.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.882
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.882       -23.294 clk 
+Info (332146): Worst-case hold slack is 0.865
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.865         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631       -16.295 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.571
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.571        -4.568 clk 
+Info (332146): Worst-case hold slack is 0.351
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.351         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -13.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4570 megabytes
+    Info: Processing ended: Thu Dec 03 10:00:47 2020
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:01
+
+
